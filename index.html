@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MDUY - DOWNLOAD & INFO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #000;
+            background-image: radial-gradient(circle at 50% -20%, #1e293b, #000);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .neon-text { text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); }
+        .btn-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-gradient:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
+        #toast { 
+            position: fixed; top: 5%; left: 50%; transform: translate(-50%, -20px); 
+            opacity: 0; visibility: hidden; z-index: 100; width: 85%; max-width: 380px; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        #toast.show { transform: translate(-50%, 20px); opacity: 1; visibility: visible; }
+        #toastContent { 
+            padding: 1.25rem; border-radius: 24px; background: rgba(15, 23, 42, 0.95); 
+            backdrop-filter: blur(20px); border: 1px solid rgba(56, 189, 248, 0.4); 
+            color: #f1f5f9; font-size: 13px; line-height: 1.8; text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+        .rotating { animation: spin 3s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        #loading-screen.fade-out { opacity: 0; visibility: hidden; transition: all 0.6s ease; }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-4">
+
+<div id="loading-screen" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black">
+    <div class="relative w-40 h-40 flex items-center justify-center">
+        <img src="https://media.tenor.com/vkJQcnn06_EAAAAj/dancing-cat-oppa-gangnam-style.gif" alt="Dance Cat" class="w-full h-full object-contain">
+    </div>
+    <p class="mt-6 text-[10px] tracking-[0.3em] text-sky-500 font-bold uppercase animate-pulse">MDUY LOADING...</p>
+</div>
+
+<div class="app-card w-full max-w-[420px] space-y-6">
+    <div class="text-center space-y-2">
+        <h1 class="text-4xl font-extrabold tracking-tighter neon-text italic uppercase">MDUY<span class="text-sky-400">PROXY</span></h1>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-[10px] text-gray-400 uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> SYSTEM ONLINE
+        </div>
+    </div>
+
+    <div class="glass rounded-[32px] p-8 space-y-6">
+        <div class="space-y-4">
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold text-sky-400 ml-1 uppercase tracking-widest">Kích hoạt License</label>
+                <input type="text" id="keyInput" placeholder="Nhập Key tại đây..." 
+                class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-5 outline-none text-white font-mono">
+            </div>
+            
+            <button type="button" onclick="fakeNotice()" class="btn-gradient w-full py-4 rounded-2xl text-black font-extrabold text-sm uppercase">
+                Tiếp tục kích hoạt <i class="fa-solid fa-bolt ml-2"></i>
+            </button>
+
+            <p class="text-[9px] text-gray-500 text-center uppercase font-bold leading-relaxed">
+                ⚠️ Vui lòng truy cập trang chủ hệ thống chính thống<br>để kiểm tra Key và kích hoạt Proxy! đây là bản fake để tải nhanh!
+            </p>
+        </div>
+
+        <div class="h-[1px] bg-white/10 my-6"></div>
+
+        <div class="space-y-3">
+            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest block text-center mb-4">Download MDUY MOD</span>
+            
+            <a href="https://www.getuid.gt.tc/info?aimdragnoantenna" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-sky-500 transition-all group">
+                <div class="flex flex-col">
+                    <span class="text-[11px] font-bold text-white uppercase">MDUY AIMDRAG</span>
+                    <span class="text-[9px] text-gray-500">No Antenna - Safe 100%</span>
+                </div>
+                <i class="fa-solid fa-download text-sky-500 group-hover:bounce"></i>
+            </a>
+
+            <a href="https://www.getuid.gt.tc/info?aimdragantenna" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-sky-500 transition-all group">
+                <div class="flex flex-col">
+                    <span class="text-[11px] font-bold text-white uppercase">MDUY AIMDRAG ANTEN</span>
+                    <span class="text-[9px] text-gray-500">Full Menu Fix Lag</span>
+                </div>
+                <i class="fa-solid fa-download text-sky-500 group-hover:bounce"></i>
+            </a>
+
+            <a href="https://www.getuid.gt.tc/info?aimbody" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-sky-500 transition-all group">
+                <div class="flex flex-col">
+                    <span class="text-[11px] font-bold text-white uppercase">MDUY AIMBODY</span>
+                    <span class="text-[9px] text-gray-500">V.I.P Version</span>
+                </div>
+                <i class="fa-solid fa-download text-sky-500 group-hover:bounce"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center pt-2">
+        <a href="https://zalo.me/0328033706" target="_blank" class="text-[10px] text-gray-600 hover:text-sky-500 font-bold uppercase">
+            © DESIGN BY mduyfakeweb lên ưeeb 9 duyệt nhá!
+        </a>
+    </div>
+</div>
+
+<div id="toast"><div id="toastContent"></div></div>
+
+<audio id="bgMusic" loop>
+    <source src="https://raw.githubusercontent.com/KenCute1188/blockfmi-beovip/main/Mashup%20H2k%204in1%20-%20%C4%90%E1%BB%ABng%20H%E1%BB%8Fi%20Em%20%E1%BB%94n%20Kh%C3%B4ng%20x%20H%C6%B0%C6%A1ng%20Hoa%20Phai%20T%C3%A0n%20x%20Em%20C%C3%B3%20Bi%E1%BA%BFt%20x%20Xa%20M%C3%A3i%20_%20H2K%20REMIX%20TIKTOK%20%5Byt0agr81fYM%5D.mp3" type="audio/mpeg">
+</audio>
+
+<div id="music-player" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 glass p-2 pr-4 rounded-full" onclick="toggleMusic()">
+    <button class="w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center">
+        <i id="music-icon" class="fa-solid fa-play text-sky-400"></i>
+    </button>
+    <span id="music-status" class="text-[9px] text-gray-400 font-bold uppercase">Music</span>
+</div>
+
+<script>
+    function fakeNotice() {
+        showToast("⚠️ HỆ THỐNG THÔNG BÁO:\nVui lòng truy cập trang chủ chính thức để kích hoạt Key!\nBản Mod này chỉ hỗ trợ tải nhanh.", "#38bdf8");
+    }
+
+    function showToast(msg, color) {
+        const t = document.getElementById('toast');
+        const tc = document.getElementById('toastContent');
+        tc.innerText = msg; tc.style.borderLeft = `4px solid ${color}`;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 5000);
+    }
+
+    const music = document.getElementById('bgMusic');
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            document.getElementById('music-icon').className = 'fa-solid fa-compact-disc text-sky-400 rotating';
+            document.getElementById('music-status').innerText = 'Đang phát';
+        } else {
+            music.pause();
+            document.getElementById('music-icon').className = 'fa-solid fa-play text-sky-400';
+            document.getElementById('music-status').innerText = 'Đã tắt';
+        }
+    }
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('loading-screen').classList.add('fade-out');
+            setTimeout(() => { document.getElementById('loading-screen').style.display = 'none'; }, 600);
+        }, 800);
+    });
+</script>
+</body>
+</html>
